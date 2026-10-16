@@ -1,0 +1,26 @@
+#!/bin/sh
+set -eu
+gpio_chip=
+for candidate in /sys/class/gpio/gpiochip*; do
+    if [ "$(cat "$candidate/label")" = 4201000.gpio ]; then
+        gpio_chip=$candidate
+        break
+    fi
+done
+test -n "$gpio_chip"
+gpio_number=$(($(cat "$gpio_chip/base") + 4))
+if [ ! -d /sys/class/gpio/gpio${gpio_number} ]; then
+    printf '%s\n' "$gpio_number" > /sys/class/gpio/export
+fi
+printf 'high\n' > /sys/class/gpio/gpio${gpio_number}/direction
+attempt=0
+while [ "$attempt" -lt 20 ]; do
+    printf 'device\n' > /sys/kernel/debug/usb/31000000.usb/mode
+    [ -d /sys/class/udc/31000000.usb ] && break
+    attempt=$((attempt + 1))
+    sleep 1
+done
+test -d /sys/class/udc/31000000.usb
+modprobe g_ether dev_addr=02:00:00:77:00:01 host_addr=02:00:00:77:00:02
+ip address replace 192.168.77.1/24 dev usb0
+ip link set usb0 up

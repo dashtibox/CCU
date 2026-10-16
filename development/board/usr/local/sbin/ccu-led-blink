@@ -1,0 +1,6 @@
+#!/bin/sh
+set -eu
+led=/sys/class/leds/green:debug-1
+printf 'timer\n' > "$led/trigger"
+printf '500\n' > "$led/delay_on"
+printf '500\n' > "$led/delay_off"

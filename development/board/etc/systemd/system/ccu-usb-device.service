@@ -1,0 +1,14 @@
+[Unit]
+Description=CCU USB-C device networking and GPIO4 mux selection
+After=systemd-udev-settle.service chargebridge-usbc-host.service NetworkManager.service
+Wants=systemd-udev-settle.service chargebridge-usbc-host.service
+Before=chargebridge-usb-watch.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/ccu-usb-device
+RemainAfterExit=yes
+TimeoutStartSec=30
+
+[Install]
+WantedBy=multi-user.target
