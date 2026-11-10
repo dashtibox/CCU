@@ -1,5 +1,24 @@
 # Revision history
 
+## display-v1.1.0 — 2026-11-10
+
+- Replace the static Hello World boot test with the VIS logo splash and live
+  ChargeBridge Monitoring touchscreen application.
+- Add module detail tabs, swipe scrolling, future-options placeholders and an
+  expandable home list with configured/live-discovered EVerest modules.
+- Add large metallic-gold battery artwork, friendly unplugged faces and actual
+  SoC percentage/fill when fresh vehicle data is available.
+- Correct LCD color inversion and GT911 reset/interrupt initialization.
+- Increase SPI from 500 kHz to 4 MHz, cache text blending and send only changed rows.
+- Distinguish event-driven EVerest state from measurement freshness and account
+  for the startup clock correction and 40-second API heartbeat cadence.
+- Save exact installed runtime files, source artwork, generators, checksums,
+  eighteen tests, display installer and complete setup/recovery documentation.
+
+Validation: runtime checksums match the board; service enabled/active with no
+restarts; user-confirmed touch, correct colors and improved speed. Tests pass.
+The final full cold power-cycle and real vehicle/SoC flow remain untested.
+
 ## display-v1.0.0 — 2026-11-10
 
 - Add the tested ST7789V2 Hello World program, its 320 × 240 RGB565 frame,

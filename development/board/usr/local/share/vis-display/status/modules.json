@@ -1,0 +1,4 @@
+[
+  {"id":1,"name":"ACDC #1","model":"VIS-ACDC-1.0","chargebridge_model":"CB-CCS-EVSE-LU","connection":"USB","ip":"192.168.5.136","service":"pionix-chargebridge","bridge_key":"cb_eval","connector":"vis_acdc1"},
+  {"id":2,"name":"ACDC #2","model":"VIS-ACDC-1.0","chargebridge_model":"CB-CCS-EVSE-LU","connection":"Ethernet","ip":"192.168.1.247","service":"pionix-chargebridge-acdc2","bridge_key":"cb_acdc2","connector":"vis_acdc2"}
+]

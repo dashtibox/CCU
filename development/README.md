@@ -1,18 +1,22 @@
 # CB-VIS-CCU-V2.0 bring-up
 
-## Current display revision: display-v1.0.0 — 2026-11-10
+## Current display revision: display-v1.1.0 — 2026-11-10
 
-The Phoenix Contact 1335865 display on X24 works through the
-CB-VIS-LEVELSHIFT-V1.0 adapter. The LCD visibly showed Hello World, and
-`vis-display-hello.service` is installed, enabled, and successfully executed.
-The GT911 touch controller returned product ID `911` on I2C bus 2 at `0x14`.
-Touch input events and a full power-cycle test of the display service remain
-unverified.
+The Phoenix Contact 1335865 touchscreen on X24 runs ChargeBridge Monitoring
+through CB-VIS-LEVELSHIFT-V1.0. The actual VIS logo appears at startup, followed
+by two module cards with large gold battery icons and EVerest state. Touch opens
+scrollable Status, Specs and Options pages. The home list expands for future
+modules. Colors, touch navigation and the faster display are user-confirmed.
 
-See [display instructions](display/README.md) for the exact three files to install,
-the pin mapping, checks, and rollback. This display-only installation does not
-require installing the older USB configuration below. Ethernet management was
-verified at `192.168.1.238` on 2026-11-10.
+`vis-display-status.service` is enabled and active; the previous Hello World
+service is disabled. The service includes automatic recovery, a watchdog and
+the corrected LCD/GT911 reset sequence. Full cold power-cycle verification of
+this final revision remains pending.
+
+See the [complete display README](display/README.md) for installation, runtime
+files, module configuration, telemetry validity, tests and recovery. Ethernet
+management was verified at `192.168.1.238`. Install only the display update;
+the following USB/LED snapshot is historical.
 
 ## Historical USB and LED bring-up — 2026-10-15
 

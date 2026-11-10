@@ -1,0 +1,9 @@
+
+# Python verification artifacts
+__pycache__/
+*.pyc
+# Regenerated display artwork (published runtime copies live under development/board)
+development/display/assets/*.rgb565
+development/display/assets/fonts.json
+development/display/assets/batteries.json
+development/display/assets/*preview*.png

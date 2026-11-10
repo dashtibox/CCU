@@ -1,3 +1,12 @@
+4ea66c5bd89a8370a8a40bf6d208e0360a0c5cbd1d3002a09a71977a027921bc  development/board/etc/systemd/system/vis-display-status.service
+61c9b9de34b740a8c40ee56f8fe43828e3e9761b2f8931eb59f08d526fc671b5  development/board/usr/local/bin/vis-display-status.py
 b3767a79cf135735573dd8b378b00a25c74ecc9131d9dfe31497d38dab5bc320  development/board/usr/local/bin/vis-lcd-hello.py
-0bb7a8a093fd2b67eb40828ee9db98346801a05107b26f26acf8f6a8adbcf04b  development/board/usr/local/share/vis-display/hello-world.rgb565
-374a50b8c49fbfa9fa275ab3ed9d8fab77488ff50d090141889971ba6b8680f1  development/board/etc/systemd/system/vis-display-hello.service
+d69a3e83897e396ee03276de11a81a55863e73cfa3ac315c312037c60b35948e  development/board/usr/local/bin/vis_battery.py
+cdc15d1bc7e3a05ce681f7a8f04e8def90283ba54d2333ff24b1d73a91f82354  development/board/usr/local/bin/vis_modules.py
+726280f616bc749a520fc716c31fd2c147cab23ea015fe152d75a9321df13688  development/board/usr/local/bin/vis_touch.py
+910863af0f5f83ef30253c3ed7baf83259f7034878980d04848d9981524f96ce  development/board/usr/local/bin/vis_ui.py
+e111afe565e3a2b20ff0b47d4aa6384764fd7429f6a8200c3645bef0667f7bb2  development/board/usr/local/share/vis-display/status/background.rgb565
+c5d978f71ccb40b89893a710852ba41d0fdedc954d93f5387752d0600fc864a2  development/board/usr/local/share/vis-display/status/batteries.json
+990d9f07032bec38a7626f8a4601aebfb9e2d74fc0d14885ec440d02162b2d2b  development/board/usr/local/share/vis-display/status/fonts.json
+cb628f515854f8da183bb4d0182f3b5f98310c850b3e9a2cece449328b872b52  development/board/usr/local/share/vis-display/status/modules.json
+e6a37bb5ad48fe5ba1a4cf4afa6bbb43397fd6cd1098d3dd5ff39a00e34e57c9  development/board/usr/local/share/vis-display/status/splash.rgb565
