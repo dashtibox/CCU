@@ -1,0 +1,13 @@
+[Unit]
+Description=Show Hello World on the CCU X24 display
+After=systemd-udev-trigger.service
+
+[Service]
+Type=oneshot
+ExecStartPre=/bin/sh -c 'for attempt in $(seq 1 30); do test -c /dev/spidev0.0 && test -d /sys/class/gpio/gpiochip515 && exit 0; sleep 1; done; exit 1'
+ExecStart=/usr/bin/python3 /usr/local/bin/vis-lcd-hello.py
+RemainAfterExit=yes
+TimeoutStartSec=45
+
+[Install]
+WantedBy=multi-user.target

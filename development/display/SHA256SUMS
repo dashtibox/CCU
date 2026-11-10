@@ -1,0 +1,3 @@
+b3767a79cf135735573dd8b378b00a25c74ecc9131d9dfe31497d38dab5bc320  development/board/usr/local/bin/vis-lcd-hello.py
+0bb7a8a093fd2b67eb40828ee9db98346801a05107b26f26acf8f6a8adbcf04b  development/board/usr/local/share/vis-display/hello-world.rgb565
+374a50b8c49fbfa9fa275ab3ed9d8fab77488ff50d090141889971ba6b8680f1  development/board/etc/systemd/system/vis-display-hello.service

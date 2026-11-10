@@ -1,12 +1,29 @@
 # Hardware schematics
 
-Original PDFs supplied by the board designer, copied unchanged from Downloads
-on 2026-10-17.
+Original PDFs supplied by the board designer, copied unchanged from Downloads.
+The CCU and ACDC drawings were archived on 2026-10-17; the level-shifter drawing
+was added on 2026-11-10 with software/documentation revision `display-v1.0.0`.
 
 | Document | PDF pages | Description |
 | --- | --- | --- |
 | [CB-VIS-ACDC-V1.0](cb-vis-acdc-v1.0%20Schematics.PDF) | 13 | Power, Ethernet, ChargeBridge, ADCs, output interfaces, headers, and mechanical sheets |
 | [CB-VIS-CCU-V2.0](cb-vis-ccu-v2.0%20schematics.pdf) | 18 | Verdin carrier power, USB, Ethernet, display/camera interfaces, PCIe, SD, headers, TPM, and mechanical sheets |
+| [CB-VIS-LEVELSHIFT-V1.0](cb-vis-levelshift-v1.0.pdf) | 5 | X24 LCD/touch adapter, TXS0108E signal translation, TLV75518 1.8 V regulator, and PCB layout |
+
+## Level-shifter / display reference
+
+- PDF page 3, `Level Shifter.SchDoc`: X24 is the CCU side and X24x is the
+  display side. IC1 TXS0108EPWR translates GPIO1/2/3 and SPI CS/CLK/MOSI
+  between 1.8 V and 3.3 V. OE connects to the 1.8 V rail.
+- IC2 TLV75518PDYDR creates 1.8 V from the 3.3 V supply.
+- I2C SCL/SDA pass through; the CCU schematic shows their translator at IC13.
+- LCD reset and touch reset share GPIO1. PDF page 5 shows the adapter layout.
+- The file/revision-history identifies the adapter as V1.0; some drawing title
+  blocks retain the older `cb-vis-ccu` / V2.0 template text. The PDF is preserved
+  unchanged.
+
+The assembled display showed Hello World on 2026-11-10. See
+[display validation and boot setup](../development/display/README.md).
 
 ## CCU reference pages
 
